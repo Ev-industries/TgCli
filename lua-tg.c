@@ -1225,7 +1225,7 @@ void lua_do_all (void) {
       tgl_do_get_dialog_list (TLS, 100, 0, lua_dialog_list_cb, lua_ptr[p ++].ptr);
       break;
     case lq_msg:
-      tgl_do_send_message (TLS, lua_ptr[p + 1].peer_id, LUA_STR_ARG (p + 2), 0, NULL, lua_msg_cb, lua_ptr[p].ptr);
+      tgl_do_send_message (TLS, lua_ptr[p + 1].peer_id, LUA_STR_ARG (p + 2), TGLMF_HTML, NULL, lua_msg_cb, lua_ptr[p].ptr);
       p += 3;
       break;
     case lq_msg_channel:
